@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parent Login – Bright Futures Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+  <header>
+    <div>
+      <h1>Bright Futures Tracker</h1>
+      <div class="subtitle">Development, behaviour and health monitoring</div>
+    </div>
+    <nav>
+      <a href="home_page.html">🏠 Home</a>
+      <a href="dashboard.html">📊 Milestone Tracker</a>
+      <a href="login.html">🔑 Login</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <a href="login.html" class="back-link">← Back to role selection</a>
+    <div class="login-wrapper">
+      <div class="login-inner">
+        <span class="login-icon">👨‍👩‍👧</span>
+        <h2 class="login-title">Parent Login</h2>
+        <p class="login-subtitle">Access your child's development tracker.</p>
+
+        <form class="form-section" id="loginForm">
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" required placeholder="you@example.com">
+          </div>
+
+          <div class="form-row">
+            <label for="password">Password</label>
+            <input type="password" id="password" required placeholder="Enter your password">
+          </div>
+
+          <div class="form-row">
+            <label>
+              <input type="checkbox" id="remember"> Remember me
+            </label>
+          </div>
+
+          <div class="login-actions">
+            <button type="submit" class="login-btn">Login</button>
+            <a href="#" class="login-link">Forgot password?</a>
+          </div>
+
+          <div id="loginMessage" class="login-error" style="display:none;"></div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Parent Permissions Axis -->
+    <section class="axis-section">
+      <h3 class="axis-title">Parent Permissions Axis</h3>
+      <p class="axis-note">
+        Select what this parent is allowed to record in the child's tracker after login.
+      </p>
+
+      <div class="axis-grid">
+        <div class="axis-card">
+          <h5>Developmental Milestones</h5>
+          <label class="axis-option">
+            <input type="checkbox" checked>
+            Can add new milestones (e.g., first words, motor skills)
+          </label>
+          <label class="axis-option">
+            <input type="checkbox">
+            Can edit previously saved milestones
+          </label>
+        </div>
+
+        <div class="axis-card">
+          <h5>Behaviour &amp; Sensory Notes</h5>
+          <label class="axis-option">
+            <input type="checkbox" checked>
+            Can add daily behaviour notes
+          </label>
+          <label class="axis-option">
+            <input type="checkbox">
+            Can add sensory triggers and supports
+          </label>
+        </div>
+
+        <div class="axis-card">
+          <h5>Health &amp; Medication</h5>
+          <label class="axis-option">
+            <input type="checkbox">
+            Can log minor health events (fever, cold, etc.)
+          </label>
+          <label class="axis-option">
+            <input type="checkbox">
+            Can request medicine changes (needs clinician approval)
+          </label>
+        </div>
+
+        <div class="axis-card">
+          <h5>View Rights</h5>
+          <label class="axis-option">
+            <input type="checkbox" checked>
+            Can view full milestone history
+          </label>
+          <label class="axis-option">
+            <input type="checkbox" checked>
+            Can view health and therapy summary
+          </label>
+        </div>
+      </div>
+
+      <div class="axis-footer">
+        <button class="login-btn" type="button" id="savePermissionsBtn">
+          Save Parent Permissions
+        </button>
+        <span class="axis-footer-note">
+          Demo only – in a real system, these choices would be stored for this parent account.
+        </span>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    Bright Futures Tracker &ndash; Educational use only, not a substitute for medical advice.
+  </footer>
+
+  <script>
+    const loginForm = document.getElementById('loginForm');
+    const loginMessage = document.getElementById('loginMessage');
+
+    loginForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      if (!email || !password) {
+        loginMessage.style.display = 'block';
+        loginMessage.textContent = 'Please enter both email and password.';
+        return;
+      }
+
+      // TODO: Replace with fetch('/api/auth/parent-login', { method: 'POST', body: JSON.stringify({ email, password }) })
+      loginMessage.style.display = 'none';
+      window.location.href = 'home_page.html';
+    });
+
+    document.getElementById('savePermissionsBtn').addEventListener('click', () => {
+      // TODO: Collect checkbox state and send to backend API
+      const btn = document.getElementById('savePermissionsBtn');
+      btn.textContent = 'Permissions Saved ✓';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = 'Save Parent Permissions';
+        btn.disabled = false;
+      }, 2000);
+    });
+  </script>
+
+</body>
+
+</html>

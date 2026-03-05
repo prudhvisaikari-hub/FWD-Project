@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Hub – Bright Futures Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+  <header>
+    <div>
+      <h1>Bright Futures Tracker</h1>
+      <div class="subtitle">Development, behaviour and health monitoring</div>
+    </div>
+    <nav>
+      <a href="home_page.html">🏠 Home</a>
+      <a href="dashboard.html">📊 Milestone Tracker</a>
+      <a href="login.html" class="active">🔑 Login</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 30px;">
+      <h2 class="section-title" style="display:inline-block; border:none; padding:0;">Welcome to Bright Futures</h2>
+      <p style="color: #666; font-size: 15px;">Please select your role to continue to your dashboard.</p>
+    </div>
+
+    <div class="role-grid">
+      <!-- Parent Card -->
+      <a href="login_parent.html" class="role-card role-card--parent">
+        <span class="role-icon">👨‍👩‍👧</span>
+        <h3 class="role-title">Parent</h3>
+        <p class="role-desc">Track your child's daily milestones, routines, and health journey.</p>
+      </a>
+
+      <!-- Doctor Card -->
+      <a href="login_doctor.html" class="role-card role-card--doctor">
+        <span class="role-icon">🩺</span>
+        <h3 class="role-title">Doctor / Clinician</h3>
+        <p class="role-desc">Review clinical data, manage medications, and update treatment plans.</p>
+      </a>
+
+      <!-- Caretaker Card -->
+      <a href="login_caretaker.html" class="role-card role-card--caretaker">
+        <span class="role-icon">🤝</span>
+        <h3 class="role-title">Caretaker / Educator</h3>
+        <p class="role-desc">Log classroom activities, social progress, and sensory observations.</p>
+      </a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    Bright Futures Tracker &ndash; Educational use only, not a substitute for medical advice.
+  </footer>
+
+</body>
+
+</html>

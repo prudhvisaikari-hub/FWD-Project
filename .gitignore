@@ -1,0 +1,16 @@
+# Temporary/System files
+.DS_Store
+Thumbs.db
+
+# Workspace settings
+.vscode/
+.idea/
+
+# Gemini/Antigravity artifacts
+.gemini/
+brain/
+implementation_plan.md
+task.md
+deployment_readiness_report.md
+walkthrough.md
+university_technical_report.md

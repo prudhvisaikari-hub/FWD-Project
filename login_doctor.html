@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Login – Bright Futures Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h1>Bright Futures Tracker</h1>
+            <div class="subtitle">Development, behaviour and health monitoring</div>
+        </div>
+        <nav>
+            <a href="home_page.html">🏠 Home</a>
+            <a href="dashboard.html">📊 Milestone Tracker</a>
+            <a href="login.html">🔑 Login</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <a href="login.html" class="back-link">← Back to role selection</a>
+        <div class="login-wrapper" style="border-top: 5px solid #e53935;">
+            <div class="login-inner">
+                <span class="login-icon">🩺</span>
+                <h2 class="login-title">Doctor Login</h2>
+                <p class="login-subtitle">Review development data and manage clinical records.</p>
+
+                <form class="form-section" id="loginForm">
+                    <div class="form-row">
+                        <label for="email">Clinical Email / ID</label>
+                        <input type="email" id="email" required placeholder="doctor@hospital.com">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required placeholder="Enter your password">
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <input type="checkbox" id="remember"> Remember clinical session
+                        </label>
+                    </div>
+
+                    <div class="login-actions">
+                        <button type="submit" class="login-btn"
+                            style="background: linear-gradient(135deg, #c62828, #e53935);">Login</button>
+                        <a href="#" class="login-link">Forgot password?</a>
+                    </div>
+
+                    <div id="loginMessage" class="login-error" style="display:none;"></div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Doctor Permissions Axis -->
+        <section class="axis-section">
+            <h3 class="axis-title">Doctor / Clinician Permissions</h3>
+            <p class="axis-note">
+                Set the access level for this clinical account within the tracker.
+            </p>
+
+            <div class="axis-grid">
+                <div class="axis-card">
+                    <h5>Clinical Records</h5>
+                    <label class="axis-option">
+                        <input type="checkbox" checked>
+                        Can view medical history and diagnosis
+                    </label>
+                    <label class="axis-option">
+                        <input type="checkbox" checked>
+                        Can update clinical staging and notes
+                    </label>
+                </div>
+
+                <div class="axis-card">
+                    <h5>Medication Management</h5>
+                    <label class="axis-option">
+                        <input type="checkbox" checked>
+                        Can prescribe and modify medication plan
+                    </label>
+                    <label class="axis-option">
+                        <input type="checkbox" checked>
+                        Can approve parent medicine requests
+                    </label>
+                </div>
+
+                <div class="axis-card">
+                    <h5>Assessments</h5>
+                    <label class="axis-option">
+                        <input type="checkbox" checked>
+                        Can conduct standardised evaluations
+                    </label>
+                    <label class="axis-option">
+                        <input type="checkbox" checked>
+                        Can write formal referral letters
+                    </label>
+                </div>
+
+                <div class="axis-card">
+                    <h5>View Rights</h5>
+                    <label class="axis-option">
+                        <input type="checkbox" checked>
+                        Can view parent-entered observations
+                    </label>
+                    <label class="axis-option">
+                        <input type="checkbox" checked>
+                        Can view full classroom activity logs
+                    </label>
+                </div>
+            </div>
+
+            <div class="axis-footer">
+                <button class="login-btn" type="button" id="savePermissionsBtn" style="background: #e53935;">
+                    Save Doctor Permissions
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        Bright Futures Tracker &ndash; Educational use only, not a substitute for medical advice.
+    </footer>
+
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const loginMessage = document.getElementById('loginMessage');
+
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Demo logic
+            window.location.href = 'home_page.html';
+        });
+
+        document.getElementById('savePermissionsBtn').addEventListener('click', () => {
+            const btn = document.getElementById('savePermissionsBtn');
+            btn.textContent = 'Permissions Saved ✓';
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.textContent = 'Save Doctor Permissions';
+                btn.disabled = false;
+            }, 2000);
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milestone Tracker – Bright Futures Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Bright Futures Tracker</h1>
+            <div class="subtitle">Development, behaviour and health monitoring</div>
+        </div>
+        <nav>
+            <a href="home_page.html">🏠 Home</a>
+            <a href="dashboard.html">📊 Milestone Tracker</a>
+            <a href="login.html">🔑 Login</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <section class="hero">
+            <div class="hero-text">
+                <h2>Development Activity Tracker</h2>
+                <p>
+                    The Bright Futures Development Activity Tracker offers a structured way to capture milestones,
+                    behaviours and health events from infancy through adolescence, with a special focus on autism
+                    and physical illness.
+                </p>
+                <p>
+                    It is an educational and monitoring tool to support early identification of developmental
+                    delays and guide timely intervention, not a replacement for clinical diagnosis or treatment.
+                </p>
+                <button class="hero-button" onclick="window.location.href='login.html'">
+                    Go to Login &amp; Permissions
+                </button>
+            </div>
+            <aside class="hero-aside">
+                <p><strong>Sample Profile</strong></p>
+                <p>Name: <strong>Sample Child</strong></p>
+                <p>Age: 7 years</p>
+                <p>Primary focus: Autism Spectrum, chronic physical illness monitoring.</p>
+                <p>Care team: Parents, pediatrician, therapist, teacher.</p>
+            </aside>
+        </section>
+
+        <h3 class="section-title">Current Developmental Overview</h3>
+
+        <div class="grid">
+            <div class="card">
+                <h4>Core Domains</h4>
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Domain</th>
+                            <th>Status</th>
+                            <th>Comment</th>
+                        </tr>
+                        <tr>
+                            <td>Social Interaction</td>
+                            <td><span class="status-pill in-progress">Emerging</span></td>
+                            <td>Responds to name, occasional eye contact.</td>
+                        </tr>
+                        <tr>
+                            <td>Communication</td>
+                            <td><span class="status-pill in-progress">Developing</span></td>
+                            <td>Uses single words and gestures.</td>
+                        </tr>
+                        <tr>
+                            <td>Sensory Behaviour</td>
+                            <td><span class="status-pill planned">Sensitive</span></td>
+                            <td>Discomfort with loud sounds and crowds.</td>
+                        </tr>
+                        <tr>
+                            <td>Physical Health / Motor</td>
+                            <td><span class="status-pill completed">Stable</span></td>
+                            <td>On long-term medication, regular follow-ups.</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="note">
+                    Date: 24 Feb 2026 – use this section to summarise the latest multi-domain review.
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>Today's Milestones &amp; Notes</h4>
+                <p><strong>Communication:</strong> Used 3 new words during play.</p>
+                <p><strong>Social:</strong> Initiated play with sibling for 5 minutes.</p>
+                <p><strong>Sensory:</strong> Tolerated soft background music during drawing time.</p>
+                <div class="form-section">
+                    <h5 class="axis-title">Quick Add – New Milestone</h5>
+                    <div class="form-row">
+                        <label for="milestoneText">Description</label>
+                        <textarea id="milestoneText" rows="3"
+                            placeholder="e.g., Said a new phrase, joined group play, wrote their name for the first time."></textarea>
+                    </div>
+                    <div class="form-row">
+                        <label for="milestoneDomain">Domain</label>
+                        <select id="milestoneDomain">
+                            <option value="">Select domain</option>
+                            <option>Social Interaction</option>
+                            <option>Communication</option>
+                            <option>Sensory Behaviour</option>
+                            <option>Physical Health / Motor</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button class="hero-button" type="button" id="saveMilestoneBtn">Save Milestone</button>
+                        <button class="cancel-btn" type="button" id="clearMilestoneBtn">Clear</button>
+                    </div>
+                    <p class="form-message" id="milestoneMessage"></p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="section-title">Daily Activities &amp; Triggers</h3>
+
+        <div class="flex-two">
+            <div class="card">
+                <h4>Activity Schedule</h4>
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Activity</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td>Morning visual schedule</td>
+                            <td><span class="status-pill completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Speech therapy home practice</td>
+                            <td><span class="status-pill in-progress">In Progress</span></td>
+                        </tr>
+                        <tr>
+                            <td>Outdoor walk (10 minutes)</td>
+                            <td><span class="status-pill planned">Planned</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="note">
+                    Use this area for parent-entered daily routines and supports.
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>Triggers, Responses &amp; Supports</h4>
+                <p><strong>Trigger:</strong> Sudden horn sounds on the street.</p>
+                <p><strong>Response:</strong> Covered ears, became restless.</p>
+                <p><strong>Support:</strong> Moved to quiet corner, used noise-cancelling headphones, visual card
+                    explanation.</p>
+                <div class="form-section">
+                    <div class="form-row">
+                        <label for="triggerText">New Trigger / Behaviour Note</label>
+                        <textarea id="triggerText" rows="3"
+                            placeholder="Describe what happened, where, and child's response."></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button class="hero-button" type="button" id="saveTriggerBtn">Save Note</button>
+                        <button class="cancel-btn" type="button" id="clearTriggerBtn">Clear</button>
+                    </div>
+                    <p class="form-message" id="triggerMessage"></p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="section-title">Health Events &amp; Medication</h3>
+
+        <div class="flex-two">
+            <div class="card">
+                <h4>Recent Health Events</h4>
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Date</th>
+                            <th>Event</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td>20 Feb 2026</td>
+                            <td>Mild breathing difficulty after play</td>
+                            <td>Used prescribed inhaler, rest, monitored at home.</td>
+                        </tr>
+                        <tr>
+                            <td>10 Feb 2026</td>
+                            <td>Fever with fatigue</td>
+                            <td>Visited pediatrician, lab tests done, medication started.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>Medication Plan</h4>
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Medicine</th>
+                            <th>Schedule</th>
+                            <th>Purpose</th>
+                        </tr>
+                        <tr>
+                            <td>Daily controller</td>
+                            <td>Morning &amp; Night</td>
+                            <td>Chronic illness control.</td>
+                        </tr>
+                        <tr>
+                            <td>Rescue inhaler</td>
+                            <td>As needed</td>
+                            <td>Acute breathing episodes.</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="note">
+                    Tracker data supports clinical decisions but does not replace professional medical advice.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        Bright Futures Tracker &ndash; Educational use only, not a substitute for medical advice.
+    </footer>
+
+    <script>
+        /* ------------------------------------------------------------------
+           Milestone & Trigger forms — demo logic
+           TODO: Replace with fetch() calls to a real backend API.
+           ------------------------------------------------------------------ */
+
+        document.getElementById('saveMilestoneBtn').addEventListener('click', () => {
+            const text = document.getElementById('milestoneText').value.trim();
+            const domain = document.getElementById('milestoneDomain').value;
+            const msg = document.getElementById('milestoneMessage');
+
+            if (!text || !domain) {
+                msg.textContent = 'Please fill in both description and domain.';
+                msg.style.color = '#c62828';
+                return;
+            }
+
+            // TODO: fetch('/api/milestones', { method: 'POST', body: JSON.stringify({ text, domain }) })
+            msg.style.color = '#2e7d32';
+            msg.textContent = 'Milestone saved successfully (demo).';
+            document.getElementById('milestoneText').value = '';
+            document.getElementById('milestoneDomain').value = '';
+        });
+
+        document.getElementById('clearMilestoneBtn').addEventListener('click', () => {
+            document.getElementById('milestoneText').value = '';
+            document.getElementById('milestoneDomain').value = '';
+            document.getElementById('milestoneMessage').textContent = '';
+        });
+
+        document.getElementById('saveTriggerBtn').addEventListener('click', () => {
+            const text = document.getElementById('triggerText').value.trim();
+            const msg = document.getElementById('triggerMessage');
+
+            if (!text) {
+                msg.textContent = 'Please describe the trigger or behaviour note.';
+                msg.style.color = '#c62828';
+                return;
+            }
+
+            // TODO: fetch('/api/triggers', { method: 'POST', body: JSON.stringify({ text }) })
+            msg.style.color = '#2e7d32';
+            msg.textContent = 'Trigger note saved successfully (demo).';
+            document.getElementById('triggerText').value = '';
+        });
+
+        document.getElementById('clearTriggerBtn').addEventListener('click', () => {
+            document.getElementById('triggerText').value = '';
+            document.getElementById('triggerMessage').textContent = '';
+        });
+    </script>
+
+</body>
+
+</html>

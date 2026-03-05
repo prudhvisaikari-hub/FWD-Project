@@ -1,0 +1,273 @@
+/* ===================================================
+   Bright Futures Tracker — Login Page Styles
+   Premium Design
+   =================================================== */
+
+/* --- LOGIN CARD --- */
+.login-wrapper {
+    max-width: 440px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 16px;
+    padding: 0;
+    box-shadow: 0 8px 32px rgba(26, 35, 126, 0.1);
+    overflow: hidden;
+}
+
+.login-wrapper::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: linear-gradient(90deg, #1a237e, #5c6bc0, #7c4dff);
+}
+
+.login-inner {
+    padding: 32px 30px 28px;
+}
+
+.login-icon {
+    font-size: 36px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.login-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a237e;
+    margin-bottom: 4px;
+    letter-spacing: -0.3px;
+}
+
+.login-subtitle {
+    font-size: 13px;
+    color: #78909c;
+    margin-bottom: 24px;
+}
+
+/* --- LOGIN ACTIONS --- */
+.login-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+}
+
+.login-btn {
+    background: linear-gradient(135deg, #3949ab, #5c6bc0);
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    padding: 11px 28px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 12px rgba(57, 73, 171, 0.3);
+    letter-spacing: 0.2px;
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #303f9f, #5c6bc0);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(57, 73, 171, 0.4);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}
+
+.login-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.login-link {
+    font-size: 13px;
+    color: #5c6bc0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.login-link:hover {
+    color: #1a237e;
+    text-decoration: underline;
+}
+
+/* --- ERROR MESSAGE --- */
+.login-error {
+    margin-top: 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #c62828;
+    background: #ffebee;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border-left: 3px solid #e53935;
+}
+
+/* --- PERMISSIONS AXIS SECTION --- */
+.axis-section {
+    margin-top: 40px;
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.axis-note {
+    font-size: 13px;
+    color: #78909c;
+    margin-bottom: 14px;
+}
+
+.axis-option {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.axis-option:hover {
+    background: #e8eaf6;
+}
+
+.axis-option input[type="checkbox"] {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    accent-color: #5c6bc0;
+}
+
+.axis-footer {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.axis-footer-note {
+    font-size: 12px;
+    color: #9e9e9e;
+    font-style: italic;
+}
+
+/* --- ROLE SELECTION HUB --- */
+.role-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.role-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px 24px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1.5px solid #e8eaf6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.role-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #eee;
+}
+
+.role-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(26, 35, 126, 0.12);
+    border-color: #5c6bc0;
+}
+
+.role-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.role-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: #1a237e;
+    margin-bottom: 8px;
+}
+
+.role-desc {
+    font-size: 13px;
+    color: #78909c;
+    line-height: 1.55;
+}
+
+/* Color Accents */
+.role-card--parent::before {
+    background: #00897b;
+}
+
+.role-card--doctor::before {
+    background: #e53935;
+}
+
+.role-card--caretaker::before {
+    background: #ffb300;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #5c6bc0;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 480px) {
+    .login-wrapper {
+        margin: 20px 10px;
+    }
+
+    .login-inner {
+        padding: 24px 20px;
+    }
+
+    .login-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .login-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .role-grid {
+        grid-template-columns: 1fr;
+    }
+}
